@@ -53,6 +53,8 @@ services:
 
   mariadb:
     image: wodby/mariadb:$MARIADB_TAG
+    ports: 
+      - '3307:3306'
     stop_grace_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: password
